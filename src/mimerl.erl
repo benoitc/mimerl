@@ -13,7 +13,7 @@
 %%      Example:
 %%
 %% ```
-%% 1> mimetypes:extension(<<"c">>).
+%% 1> mimerl:extension(<<"c">>).
 %% <<"text/x-c">>
 %% '''
 -spec extension(binary()) -> binary().
@@ -24,7 +24,7 @@ extension(Ext) ->
 %% Example:
 %%
 %% ```
-%% 1> hackney_mimetypes:filename(<<"test.cpp">>).
+%% 1> mimerl:filename(<<"test.cpp">>).
 %% <<"text/x-c">>
 %% '''
 -spec filename(file:filename_all()) -> binary().
@@ -39,7 +39,7 @@ filename(Path) ->
 %% Example:
 %%
 %% ```
-%% 1> hackney_mimetypes:mime_to_exts(<<"text/plain">>).
+%% 1> mimerl:mime_to_exts(<<"text/plain">>).
 %% [<<"txt">>,<<"text">>,<<"conf">>,<<"def">>,<<"list">>,<<"log">>,<<"in">>]
 %% '''
 -spec mime_to_exts(binary()) -> [binary()].
