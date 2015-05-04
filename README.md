@@ -3,6 +3,10 @@ mimerl
 
 library to handle mimetypes
 
+Present a way to parse IANA mediatype as defined here:
+http://www.iana.org/assignments/media-types/media-types.xhtml
+
+
 Build
 -----
 
