@@ -1,12 +1,12 @@
 {application, mimerl,
  [{description, "An OTP library"},
-  {vsn, "1.0.0"},
+  {vsn, "1.0.1"},
   {registered, []},
   {applications, [kernel,stdlib]},
   {env,[]},
   {modules, []},
 
-  {contributors, ["Benoit Chesneau"]},
-  {licenses, ["BSD"]},
+  {maintainers, ["Benoit Chesneau"]},
+  {licenses, ["MIT"]},
   {links, [{"Github", "https://github.com/benoitc/mimerl"}]}
  ]}.
