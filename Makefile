@@ -1,26 +1,10 @@
-REBAR?=./rebar3
-DIALYZER?=dialyzer
-PLT=.hackney.plt
+PROJECT=mimerl
+PROJECT_DESCRIPTION = library to handle mimetypes
+PROJECT_VERSION = 1.0.3
 
+include erlang.mk
 
-all: build
-
-dev: devbuild
-
-doc: dev
-	$(REBAR) edoc
-
-clean:
-	$(REBAR) clean
-
-distclean: clean
-	@rm -rf deps
-
-build:
-	$(REBAR) compile
-
-test:
-	$(REBAR) eunit
+.PHONY: gen
 
 # Mimetypes module generator.
 
