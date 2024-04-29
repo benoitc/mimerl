@@ -8,7 +8,7 @@ include erlang.mk
 
 # Mimetypes module generator.
 
-GEN_URL = http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+GEN_URL = https://raw.githubusercontent.com/apache/httpd/trunk/docs/conf/mime.types 
 GEN_FILE = mime.types
 GEN_SRC = src/mimerl.erl.src
 GEN_OUT = src/mimerl.erl
