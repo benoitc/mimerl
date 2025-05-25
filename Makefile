@@ -2,6 +2,8 @@ PROJECT=mimerl
 PROJECT_DESCRIPTION = library to handle mimetypes
 PROJECT_VERSION = 1.0.3
 
+UNIQ := $(shell command -v guniq >/dev/null 2>&1 && echo guniq || echo uniq)
+
 include erlang.mk
 
 .PHONY: gen
@@ -23,7 +25,7 @@ gen:
 		| awk '{for (i=2; i<=NF; i++) if ($$i != "") { \
 			print "extensions(<<\"" $$i "\">>) -> <<\"" $$1 "\">>;"}}' \
 		| sort \
-		| guniq -w 25 \
+		| $(UNIQ) -w 25 \
 		>> $(GEN_OUT)
 	@echo "extensions(_) -> <<\"application/octet-stream\">>." >> $(GEN_OUT)
 	@echo "" >> $(GEN_OUT)
