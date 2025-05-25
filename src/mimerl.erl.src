@@ -1,7 +1,7 @@
 %% -*- erlang -*-
 %%%
 %%% This file is part of mimerl released under the MIT license.
-%%% See the NOTICE for more information.
+%%% See the LICENSE for more information.
 -module(mimerl).
 
 -export([extension/1]).
