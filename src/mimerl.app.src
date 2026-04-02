@@ -2,11 +2,12 @@
  [{description, "Library to handle mimetypes"},
   {vsn, "1.4.0"},
   {registered, []},
-  {applications, [kernel,stdlib]},
-  {env,[]},
+  {applications, [kernel, stdlib]},
+  {env, []},
   {modules, []},
 
   {maintainers, ["Benoit Chesneau"]},
   {licenses, ["MIT"]},
-  {links, [{"Github", "https://github.com/benoitc/mimerl"}]}
+  {links, [{"GitHub", "https://github.com/benoitc/mimerl"}]},
+  {files, ["src", "rebar.config", "README.md", "LICENSE", "Makefile"]}
  ]}.
