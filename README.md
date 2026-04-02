@@ -1,24 +1,45 @@
-mimerl
-=====
+# mimerl
 
-library to handle mimetypes
+An Erlang library for MIME type handling.
 
-Present a way to parse IANA mediatype as defined here:
-http://www.iana.org/assignments/media-types/media-types.xhtml
+Maps file extensions to MIME types and vice versa, based on the
+[IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) registry.
 
+## Build
 
-Build
------
+```sh
+rebar3 compile
+```
 
-    $ make
+## Usage
 
-Example of usage:
------------------
+Get MIME type from extension:
 
-    1> mimerl:extension(<<"c">>).
-    <<"text/x-c">>
-    2> mimerl:filename(<<"test.cpp">>).
-    <<"text/x-c">>
-    3> mimerl:mime_to_exts(<<"text/plain">>).
-    [<<"txt">>,<<"text">>,<<"conf">>,<<"def">>,<<"list">>,
-     <<"log">>,<<"in">>]
+```erlang
+1> mimerl:extension(<<"json">>).
+<<"application/json">>
+
+2> mimerl:extension(<<"html">>).
+<<"text/html">>
+```
+
+Get MIME type from filename:
+
+```erlang
+1> mimerl:filename(<<"index.html">>).
+<<"text/html">>
+
+2> mimerl:filename(<<"data.json">>).
+<<"application/json">>
+```
+
+Get extensions for a MIME type:
+
+```erlang
+1> mimerl:mime_to_exts(<<"text/plain">>).
+[<<"txt">>,<<"text">>,<<"conf">>,<<"def">>,<<"list">>,<<"log">>,<<"in">>]
+```
+
+## License
+
+MIT
