@@ -1,6 +1,6 @@
 PROJECT=mimerl
 PROJECT_DESCRIPTION = library to handle mimetypes
-PROJECT_VERSION = 1.0.3
+PROJECT_VERSION = 1.5.0
 
 UNIQ := $(shell command -v guniq >/dev/null 2>&1 && echo guniq || echo uniq)
 
